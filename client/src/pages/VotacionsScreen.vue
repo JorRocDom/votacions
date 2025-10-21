@@ -63,7 +63,7 @@
   
   function connectWebSocket() {
     // Canvia 'localhost:3000' per l'adreça del teu servidor si el desplegues
-    ws = new WebSocket('ws://localhost:3000') 
+    ws = new WebSocket('http://200.234.234.222') 
   
     ws.onopen = () => {
       console.log('Connectat al servidor WebSocket')
