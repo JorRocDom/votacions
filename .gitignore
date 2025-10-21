@@ -1,0 +1,19 @@
+# Dependencias (¡Nunca subir esto!)
+node_modules/
+
+# Archivos de entorno (Contiene secretos y API keys)
+.env
+.env.local
+.env.*.local
+
+# Archivos de build (se generan automáticamente)
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-error.log
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
