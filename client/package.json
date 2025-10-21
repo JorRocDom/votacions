@@ -4,6 +4,8 @@
   "type": "module",
   "version": "0.0.0",
   "main": "dist-electron/main.js",
+  "description": "votacions", 
+  "author": "Jordi (jordirochadomingo2006@gmail.com)", 
   "scripts": {
     "dev": "vite",
     "build": "vite build && electron-builder",
