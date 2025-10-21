@@ -4,6 +4,7 @@ import Vue from '@vitejs/plugin-vue'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import Fonts from 'unplugin-fonts/vite'
 import VueRouter from 'unplugin-vue-router/vite'
+import electron from 'vite-plugin-electron' // Import correcte
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -16,7 +17,6 @@ export default defineConfig({
     Vue({
       template: { transformAssetUrls },
     }),
-    // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     Vuetify({
       autoImport: true,
       styles: {
@@ -35,6 +35,13 @@ export default defineConfig({
         ],
       },
     }),
+    
+    electron([
+      {
+        entry: 'electron/main.cjs', 
+      }
+    ]),
+
   ],
   optimizeDeps: {
     exclude: [
