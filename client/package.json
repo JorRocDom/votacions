@@ -3,12 +3,11 @@
   "private": true,
   "type": "module",
   "version": "0.0.0",
-  "main": "dist-electron/main.js",
-  "description": "votacions", 
-  "author": "Jordi (jordirochadomingo2006@gmail.com)", 
+  "description": "votacions",
+  "author": "Jordi (jordirochadomingo2006@gmail.com)",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && electron-builder",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix"
   },
@@ -25,14 +24,11 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.0",
-    "electron": "^38.3.0",
-    "electron-builder": "^26.0.12",
     "sass-embedded": "^1.92.1",
     "unplugin-fonts": "^1.1.1",
     "unplugin-vue-components": "^0.27.0",
     "unplugin-vue-router": "^0.9.0",
     "vite": "^5.0.0",
-    "vite-plugin-electron": "^0.29.0",
     "vite-plugin-vuetify": "^2.1.2"
   }
 }

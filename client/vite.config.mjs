@@ -4,8 +4,6 @@ import Vue from '@vitejs/plugin-vue'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import Fonts from 'unplugin-fonts/vite'
 import VueRouter from 'unplugin-vue-router/vite'
-import electron from 'vite-plugin-electron' // Import de Electron
-
 // Utilities
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
@@ -13,11 +11,10 @@ import { fileURLToPath, URL } from 'node:url'
 // https://vitejs.dev/config/
 export default defineConfig({
   
-  // SOLUCIÓN A LA PANTALLA EN BLANCO:
-  // Esto hace que las rutas en el build (index.html) sean relativas (./assets)
+  // Ya no tenemos 'base: ./'
   base: './',
-
   plugins: [
+  
     VueRouter(),
     Vue({
       template: { transformAssetUrls },
@@ -41,12 +38,7 @@ export default defineConfig({
       },
     }),
     
-    // Configuración de Electron
-    electron([
-      {
-        entry: 'electron/main.cjs', // Apuntamos al archivo .cjs
-      }
-    ]),
+    // El bloque de 'electron' se ha eliminado
 
   ],
   optimizeDeps: {
